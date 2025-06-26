@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #4caf50;
+  --light-green: #e8f5e8;
+  --primary-blue: #2196f3;
+  --light-blue: #e3f2fd;
+  --dark-gray: #424242;
+  --medium-gray: #757575;
+  --light-gray: #f5f5f5;
+  --border-gray: #e0e0e0;
+  --white: #ffffff;
+  --hover-gray: #f8f8f8;
+  --success-green: #4caf50;
+  --warning-orange: #ff9800;
+  --error-red: #f44336;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--white);
+  color: var(--dark-gray);
+}
+
+@layer utilities {
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: var(--light-gray);
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: var(--medium-gray);
+    border-radius: 6px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease;
+}
+
+.animate-slide-out {
+  animation: slideOut 0.3s ease;
+}
