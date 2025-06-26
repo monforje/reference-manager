@@ -36,3 +36,7 @@ export interface NotificationProps {
   type: NotificationType;
   onClose: () => void;
 }
+
+export interface FormState {
+  [key: string]: string;
+}
